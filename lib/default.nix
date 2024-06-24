@@ -3,7 +3,7 @@
 }:
 
 {
-  types = lib.types // {
+  types = {
     flavourOption = lib.types.enum [ 
       "latte"
       "frappe"
@@ -120,14 +120,12 @@
   # which is sometimes needed in order to format
   # the colours correctly
   mkColour = str:
-    with builtins;
-    substring 1 (stringLength str) str;
+    builtins.substring 1 (builtins.stringLength str) str;
 
   # string -> string
   # this capitalizes the first letter in a string,
   # which is sometimes needed in order to format
   # the names of themes correctly
   mkUpper = str:
-    with builtins;
-    (lib.toUpper (substring 0 1 str)) + (substring 1 (stringLength str) str);
+    (lib.toUpper (builtins.substring 0 1 str)) + (builtins.substring 1 (builtins.stringLength str) str);
 }

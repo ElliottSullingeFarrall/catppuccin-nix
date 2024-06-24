@@ -1,12 +1,20 @@
 {
   description = "Automatic Nix theming using Catppuccin and NerdFonts.";
 
-  outputs = { self, ... }: let
-    system = "x86_64-linux";
-  in {
-    homeManagerModules.catnerd = import ./modules/home-manager;
-    nixosModules.catnerd = import ./modules/nixos;
+  inputs = {
+    snowfall-lib = {
+      url = "github:snowfallorg/lib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    checks.${system}.default = import ./tests { inherit self; };
+    nixpkgs = {
+      url = "github:nixos/nixpkgs";
+    };
   };
+
+  outputs = inputs:
+    inputs.snowfall-lib.mkFlake {
+      inherit inputs;
+      src = ./.;
+    };
 }

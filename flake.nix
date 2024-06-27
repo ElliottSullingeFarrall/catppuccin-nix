@@ -3,7 +3,7 @@
 
   inputs = {
     snowfall-lib = {
-      url = "github:snowfallorg/lib/dev";
+      url = "github:snowfallorg/lib?ref=v3.0.3";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

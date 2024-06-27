@@ -1,4 +1,5 @@
 { lib
+, namespace
 , ...
 }: 
 
@@ -7,7 +8,7 @@
     enable = lib.mkEnableOption "Enable CatNerd theming";
     
     flavour = lib.mkOption {
-      type = lib.internal.types.flavourOption;
+      type = lib.${namespace}.types.flavourOption;
       default = "macchiato";
       description = "Catppuccin flavour";
     };

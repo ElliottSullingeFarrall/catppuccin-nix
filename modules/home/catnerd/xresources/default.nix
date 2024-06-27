@@ -10,6 +10,6 @@ let
 in
 {
   config.xresources = lib.mkIf config.catnerd.enable {
-    extraConfig = "${pkgs.catppuccin-xresources.override { inherit flavour accent; }}";
+    extraConfig = "${pkgs.internal.catppuccin-xresources.override { inherit flavour accent; }}";
   };
 }

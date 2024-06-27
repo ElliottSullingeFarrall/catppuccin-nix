@@ -1,6 +1,7 @@
 { config
 , lib
 , pkgs
+, namespace
 , ...
 }:
 
@@ -10,6 +11,6 @@ let
 in
 {
   config.xresources = lib.mkIf config.catnerd.enable {
-    extraConfig = "${pkgs.internal.catppuccin-xresources.override { inherit flavour accent; }}";
+    extraConfig = "${pkgs.${namespace}.catppuccin-xresources.override { inherit flavour accent; }}";
   };
 }

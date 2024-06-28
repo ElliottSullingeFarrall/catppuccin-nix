@@ -9,7 +9,7 @@ let
   accent = config.catnerd.accent;
 
   theme = {
-    name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.mkUpper accent}-Dark";
+    name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
     package = pkgs.catppuccin-gtk.override {
       variant = flavour;
       accents = [ accent ];
@@ -22,7 +22,7 @@ in
   config.gtk = lib.mkIf config.catnerd.enable
   {
     theme = {
-      name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.mkUpper accent}-Dark";
+      name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
       package = pkgs.catppuccin-gtk.override {
         variant = flavour;
         accents = [ accent ];
@@ -38,7 +38,7 @@ in
       };
     };
     cursorTheme = {
-      name = "Catppuccin-${lib.catnerd.mkUpper flavour}-${lib.mkUpper accent}-Cursors";
+      name = "Catppuccin-${lib.catnerd.mkUpper flavour}-${lib.catnerd.mkUpper accent}-Cursors";
       package = pkgs.catppuccin-cursors.macchiatoPink;
       size = config.catnerd.cursor.size;
     };

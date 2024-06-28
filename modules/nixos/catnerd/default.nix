@@ -9,6 +9,4 @@
     ./plymouth
     ./tty
   ];
-
-  home-manager.useGlobalPkgs = true;
 }

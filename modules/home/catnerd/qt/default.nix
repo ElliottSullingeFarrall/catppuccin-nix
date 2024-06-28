@@ -13,8 +13,8 @@ in
   {
     platformTheme = "gtk";
     style = {
-      name = "Catppuccin-${lib.mkUpper flavour}-Compact-${lib.mkUpper accent}-Dark";
-      package = pkgs.catnerd.catppuccin-gtk.override {
+      name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.mkUpper accent}-Dark";
+      package = pkgs.catppuccin-gtk.override {
         variant = flavour;
         accents = [ accent ];
         size = "compact";

@@ -8,7 +8,7 @@
     enable = lib.mkEnableOption "Enable CatNerd theming";
     
     flavour = lib.mkOption {
-      type = lib.${namespace}.types.flavourOption;
+      type = lib.catnerd.types.flavourOption;
       default = "macchiato";
       description = "Catppuccin flavour";
     };

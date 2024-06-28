@@ -8,15 +8,15 @@ let
   flavour = config.catnerd.flavour;
   accent = config.catnerd.accent;
 
-  theme = {
-    name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
-    package = pkgs.catppuccin-gtk.override {
-      variant = flavour;
-      accents = [ accent ];
-      size = "compact";
-      tweaks = [ "rimless" ];
-    };
-  };
+  # theme = {
+  #   name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
+  #   package = pkgs.catppuccin-gtk.override {
+  #     variant = flavour;
+  #     accents = [ accent ];
+  #     size = "compact";
+  #     tweaks = [ "rimless" ];
+  #   };
+  # };
 in
 {
   config.gtk = lib.mkIf config.catnerd.enable

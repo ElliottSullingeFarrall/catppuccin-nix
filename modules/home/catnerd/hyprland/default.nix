@@ -13,7 +13,7 @@ in
   config.wayland.windowManager.hyprland.settings = lib.mkIf config.catnerd.enable
   {
     source = [
-      "${pkgs.catppuccin-hyprland.override { inherit flavour accent; }}"
+      "${pkgs.catnerd.catppuccin-hyprland.override { inherit flavour accent; }}"
     ];
     settings = {
       env = [

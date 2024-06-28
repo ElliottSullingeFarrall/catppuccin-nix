@@ -10,6 +10,6 @@ let
 in
 {
   config.xdg.configFile."swaync/style.css" = lib.mkIf config.catnerd.enable {
-    source = "${pkgs.catppuccin-swaync.override { inherit flavour accent; }}";
+    source = "${pkgs.catnerd.catppuccin-swaync.override { inherit flavour accent; }}";
   };
 }

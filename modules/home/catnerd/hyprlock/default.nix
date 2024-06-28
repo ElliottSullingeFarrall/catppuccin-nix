@@ -10,10 +10,10 @@ let
 in
 {
   config.xdg.configFile."hypr/hyprlock.conf" = lib.mkIf config.catnerd.enable {
-    source = "${pkgs.catppuccin-hyprlock.override { inherit flavour accent; font = config.catnerd.fonts.main.family; }}";
+    source = "${pkgs.catnerd.catppuccin-hyprlock.override { inherit flavour accent; font = config.catnerd.fonts.main.family; }}";
   };
 
   config.xdg.configFile."background" = lib.mkIf config.catnerd.enable {
-    source = pkgs.catppuccin-splash.override { inherit flavour accent; };
+    source = pkgs.catnerd.catppuccin-splash.override { inherit flavour accent; };
   };
 }

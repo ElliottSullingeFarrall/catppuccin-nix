@@ -11,7 +11,7 @@ in
 {
   config.programs.waybar = lib.mkIf config.catnerd.enable {
     style = ''
-      @import "${pkgs.catppuccin-waybar.override { inherit flavour accent; }}";
+      @import "${pkgs.catnerd.catppuccin-waybar.override { inherit flavour accent; }}";
     '';
   };
 }

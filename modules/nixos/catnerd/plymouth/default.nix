@@ -11,7 +11,7 @@ in
 {
   config.boot.plymouth = lib.mkIf config.catnerd.enable {
     themePackages = [
-      (pkgs.catppuccin-plymouth.override { inherit flavour accent; })
+      (pkgs.catnerd.catppuccin-plymouth.override { inherit flavour accent; })
     ];
     theme = "catppuccin-${flavour}";
 

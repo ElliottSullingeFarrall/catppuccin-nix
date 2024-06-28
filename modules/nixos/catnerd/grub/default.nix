@@ -10,7 +10,7 @@ let
 in
 {
   config.boot.loader.grub = lib.mkIf config.catnerd.enable {
-    theme = "${pkgs.catppuccin-grub.override { inherit flavour accent; }}";
+    theme = "${pkgs.catnerd.catppuccin-grub.override { inherit flavour accent; }}";
     splashImage = pkgs.catppuccin-splash.override { inherit flavour accent; };
 
     font = "${pkgs.nerdfonts}/share/fonts/opentype/NerdFonts/${config.catnerd.fonts.mono.family}NerdFontMono-Regular.otf";

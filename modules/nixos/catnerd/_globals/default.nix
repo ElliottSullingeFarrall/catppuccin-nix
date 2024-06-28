@@ -7,13 +7,13 @@
     enable = lib.mkEnableOption "Enable CatNerd theming";
     
     flavour = lib.mkOption {
-      type = lib.types.flavourOption;
+      type = lib.catnerd.types.flavourOption;
       default = "macchiato";
       description = "Catppuccin flavour";
     };
 
     accent = lib.mkOption {
-      type = lib.types.accentOption;
+      type = lib.catnerd.types.accentOption;
       default = "blue";
       description = "Catppuccin accent";
     };
@@ -29,7 +29,7 @@
     fonts = {
       main = {
         family = lib.mkOption {
-          type = lib.types.mainFontOption;
+          type = lib.catnerd.types.mainFontOption;
           default = "Ubuntu";
           description = "Main nerdfont family";
         };
@@ -41,7 +41,7 @@
       };
       mono = {
         family = lib.mkOption {
-          type = lib.types.monoFontOption;
+          type = lib.catnerd.types.monoFontOption;
           default = "DroidSansM";
           description = "Mono nerdfont family";
         };

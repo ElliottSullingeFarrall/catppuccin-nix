@@ -9,7 +9,7 @@ let
 in
 {
   config.programs.kitty = lib.mkIf config.catnerd.enable {
-    theme = "Catppuccin-${lib.mkUpper flavour}";
+    theme = "Catppuccin-${lib.catnerd.mkUpper flavour}";
 
     font = {
       package = pkgs.nerdfonts;

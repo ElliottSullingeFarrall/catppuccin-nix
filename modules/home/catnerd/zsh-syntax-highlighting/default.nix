@@ -9,6 +9,6 @@ let
 in
 {
   programs.zsh.initExtra = lib.mkIf config.catnerd.enable ''
-    source ${pkgs.catppuccin-zsh-syntax-highlighting.override { inherit flavour; }}
+    source ${pkgs.catnerd.catppuccin-zsh-syntax-highlighting.override { inherit flavour; }}
   '';
 }

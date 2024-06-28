@@ -22,6 +22,6 @@ in
         "XCURSOR_SIZE,${builtins.toString config.catnerd.cursor.size}"
       ];
     };
-    misc.background_color = "rgb(${lib.mkColour palette.${flavour}.base})";
+    misc.background_color = "rgb(${lib.catnerd.mkColour palette.${flavour}.base})";
   };
 }

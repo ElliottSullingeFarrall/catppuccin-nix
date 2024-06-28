@@ -1,11 +1,12 @@
 { config
 , lib
 , pkgs
-, palette
 , ...
 }:
 
 let
+  palette = import ../../../../packages/palette.nix;
+
   flavour = config.catnerd.flavour;
   accent = config.catnerd.accent;
 in

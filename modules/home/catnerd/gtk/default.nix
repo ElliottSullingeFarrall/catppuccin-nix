@@ -9,7 +9,7 @@ let
   accent = config.catnerd.accent;
 
   theme = {
-    name = "Catppuccin-${flavour}-${accent}-compact+rimless";
+    name = "catppuccin-${flavour}-${accent}-compact+rimless";
     package = pkgs.catppuccin-gtk.override {
       variant = flavour;
       accents = [ accent ];

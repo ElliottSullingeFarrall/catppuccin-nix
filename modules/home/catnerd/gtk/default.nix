@@ -22,7 +22,6 @@ in
   config.gtk = lib.mkIf config.catnerd.enable
   {
     theme = {
-      # name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
       name = "catppuccin-${flavour}-${accent}-compact+rimless";
       package = pkgs.catppuccin-gtk.override {
         variant = flavour;
@@ -39,7 +38,7 @@ in
       };
     };
     cursorTheme = {
-      name = "Catppuccin-${lib.catnerd.mkUpper flavour}-${lib.catnerd.mkUpper accent}-Cursors";
+      name = "catppuccin-${flavour}-${accent}-cursors";
       package = pkgs.catppuccin-cursors.macchiatoPink;
       size = config.catnerd.cursor.size;
     };

@@ -22,7 +22,8 @@ in
   config.gtk = lib.mkIf config.catnerd.enable
   {
     theme = {
-      name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
+      # name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
+      name = "catppuccin-${flavour}-${accent}-compact+rimless";
       package = pkgs.catppuccin-gtk.override {
         variant = flavour;
         accents = [ accent ];

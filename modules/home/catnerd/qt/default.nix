@@ -11,7 +11,7 @@ in
 {
   qt = lib.mkIf config.catnerd.enable
   {
-    platformTheme = "gtk";
+    platformTheme.name = "gtk";
     style = {
       name = "Catppuccin-${lib.catnerd.mkUpper flavour}-Compact-${lib.catnerd.mkUpper accent}-Dark";
       package = pkgs.catppuccin-gtk.override {
